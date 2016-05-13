@@ -27,23 +27,31 @@
                 <div class="menuOff">
                 </div>
             </li>
-            <li class="sub">
-                <a >Predaj</a>
-                <ul class="submenu">
-                    <li><a href="nove.php">Nové vozidlá</a></li>
-                </ul>
-            </li>
-            <li><a href="objednanie.php">Servis & Služby</a></li>
-            <li><a href="prenajom.php">Prenájom</a></li>
-            <li class="sub">
-                <a >O nás</a>
-                <ul class="submenu">
-                    <li><a href="ofirme.php">O firme</a></li>
-                </ul>
-            </li>
-            <li><a href="kontakty.php">Kontakty</a></li>
-            <li><a href="prefirmy.php">Pre firmy</a></li>
+            <?php
+             $menu = simplexml_load_file('./menu.xml');
+            //print_r($menu->level_1);
+            foreach($menu->level_1->stuff as $lvl1){
+                $out = '';
+               if(isset($lvl1->level_2)){
+                   $out = '<li class="sub">
+                   <a >'.$lvl1->$_SESSION['lang'].'</a>
+                   <ul class="submenu">';
+                   foreach($lvl1->level_2->stuff as $lvl2){
+                       $out.= '<li><a href="?page='.$lvl2->link.'">'.$lvl2->$_SESSION['lang'].'</a></li>';
+                   }
+                    $out.= '</ul></li>';
 
+               }
+                else {
+                    $out = '<li><a href="?page='.$lvl1->link.'">'.$lvl1->$_SESSION['lang'].'</a></li>';
+                }
+                echo $out;
+            }
+            ?>
         </ul>
+        <div class="langs">
+            <a href="?lang=sk">SK</a> |
+            <a href="?lang=en">ENG</a>
+        </div>
     </div>
 </div>

@@ -78,6 +78,15 @@ h3.padded {
   background-color: #323232;
   border-bottom: 2px solid #ffffff;
 }
+.header .langs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+}
+.header .langs a {
+  color: #ffffff;
+}
 .header .nav {
   padding: 0;
   margin: 0;
@@ -95,6 +104,7 @@ h3.padded {
   position: relative;
   vertical-align: middle;
   padding: 39px 0px;
+  cursor: default;
 }
 .header .nav > li.logo {
   display: none;

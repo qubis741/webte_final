@@ -11,10 +11,7 @@
         </a>
     </div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSBDUHmQzAWF2CpqGwfAgDY6iP-kBgE3s"
-        type="text/javascript"></script>
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="./scripts/unslider-master/src/js/unslider.js"></script>
 <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>

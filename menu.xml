@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <level_1>
+        <stuff>
+            <sk>Predaj</sk>
+            <en>Sale</en>
+            <level_2>
+                <stuff>
+                    <sk>Jednotka</sk>
+                    <en>One</en>
+                    <link>jeden</link>
+                </stuff>
+                <stuff>
+                    <sk>Dvojka</sk>
+                    <en>Two</en>
+                    <link>dva</link>
+                </stuff>
+            </level_2>
+        </stuff>
+        <stuff>
+            <sk>Servis</sk>
+            <en>Service</en>
+            <link>servis</link>
+        </stuff>
+    </level_1>
+</menu>

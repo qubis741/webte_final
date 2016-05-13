@@ -1,5 +1,6 @@
 <?php
-//include 'config.php';
+include 'config.php';
+include 'session.php';
 $URL_ROOT = "http://".$_SERVER['SERVER_NAME'].'/final';
 if(isset($_GET['page'])){
         $page = $_GET['page'];
@@ -13,16 +14,15 @@ else {
 ?>
 <div>
     <div class="wrap">
-        <!--<a href="<?php /*echo $URL_ROOT; */?>?page=kontakt">Kontakt</a>-->
         <?php
-        switch($page) {
+        /*switch($page) {
             case 'kontakt':
                 echo 'kontakt';
                 break;
             default:
                 echo 'Content';
                 break;
-        }
+        }*/
         ?>
     </div>
 </div>
