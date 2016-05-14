@@ -29,21 +29,20 @@
             </li>
             <?php
              $menu = simplexml_load_file('./menu.xml');
-            //print_r($menu->level_1);
             foreach($menu->level_1->stuff as $lvl1){
                 $out = '';
                if(isset($lvl1->level_2)){
                    $out = '<li class="sub">
-                   <a >'.$lvl1->$_SESSION['lang'].'</a>
+                   <a >'.$lvl1->$lang.'</a>
                    <ul class="submenu">';
                    foreach($lvl1->level_2->stuff as $lvl2){
-                       $out.= '<li><a href="?page='.$lvl2->link.'">'.$lvl2->$_SESSION['lang'].'</a></li>';
+                       $out.= '<li><a href="?page='.$lvl2->link.'">'.$lvl2->$lang.'</a></li>';
                    }
                     $out.= '</ul></li>';
 
                }
                 else {
-                    $out = '<li><a href="?page='.$lvl1->link.'">'.$lvl1->$_SESSION['lang'].'</a></li>';
+                    $out = '<li><a href="?page='.$lvl1->link.'">'.$lvl1->$lang.'</a></li>';
                 }
                 echo $out;
             }

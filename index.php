@@ -1,6 +1,6 @@
 <?php
-include 'config.php';
-include 'session.php';
+require_once 'config.php';
+require_once 'global.php';
 $URL_ROOT = "http://".$_SERVER['SERVER_NAME'].'/final';
 if(isset($_GET['page'])){
         $page = $_GET['page'];
@@ -10,23 +10,23 @@ else {
 }
 ?>
 <?php
-   include 'header.php';
+require_once 'header.php';
 ?>
 <div>
     <div class="wrap">
         <?php
-        /*switch($page) {
+        switch($page) {
             case 'kontakt':
                 echo 'kontakt';
                 break;
             default:
-                echo 'Content';
+                require_once 'test.php';
                 break;
-        }*/
+        }
         ?>
     </div>
 </div>
 
 <?php
-    include 'footer.php';
+    require_once 'footer.php';
 ?>

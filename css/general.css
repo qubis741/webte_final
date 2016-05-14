@@ -80,7 +80,7 @@ h3.padded {
 }
 .header .langs {
   position: absolute;
-  top: 0;
+  top: 8px;
   right: 0;
   color: #ffffff;
 }
@@ -467,6 +467,10 @@ span.contentHeading {
   .header#respoTrigger {
     margin-top: 85px;
     border-bottom: none;
+  }
+  .header#respoTrigger .langs {
+    right: auto;
+    left: 8px;
   }
   .header#respoTrigger.on .nav {
     right: 0;
