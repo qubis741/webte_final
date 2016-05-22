@@ -16,12 +16,29 @@ require_once 'header.php';
     <div class="wrap">
         <?php
         switch($page) {
-            case 'kontakt':
-                echo 'kontakt';
+            case 'home':
+                require_once 'home.php';
+                break;
+            case 'app':
+                require_once 'application.php';
+                break;
+            case 'f_service':
+                require_once 'f_service.php';
+                break;
+            case 's_service':
+                require_once 's_service.php';
+                break;
+            case 'news':
+                require_once 'news.php';
+                break;
+            case 'report':
+                require_once 'report.php';
+                break;
+            case 'contact':
+                require_once 'contact.php';
                 break;
             default:
-                require_once 'test.php';
-                break;
+                require_once 'home.php';
         }
         ?>
     </div>

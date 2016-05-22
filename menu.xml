@@ -2,25 +2,45 @@
 <menu>
     <level_1>
         <stuff>
-            <sk>Predaj</sk>
-            <en>Sale</en>
+            <sk>Domov</sk>
+            <en>Home</en>
+            <link>home</link>
+        </stuff>
+        <stuff>
+            <sk>Aplikácia</sk>
+            <en>Aplication</en>
+            <link>app</link>
+        </stuff>
+        <stuff>
+            <sk>Služby</sk>
+            <en>Services</en>
             <level_2>
                 <stuff>
-                    <sk>Jednotka</sk>
-                    <en>One</en>
-                    <link>jeden</link>
+                    <sk>Prvá možnosť</sk>
+                    <en>First option</en>
+                    <link>f_service</link>
                 </stuff>
                 <stuff>
-                    <sk>Dvojka</sk>
-                    <en>Two</en>
-                    <link>dva</link>
+                    <sk>Druhá možnosť</sk>
+                    <en>Second option</en>
+                    <link>s_service</link>
                 </stuff>
             </level_2>
         </stuff>
         <stuff>
-            <sk>Servis</sk>
-            <en>Service</en>
-            <link>servis</link>
+            <sk>Aktuality</sk>
+            <en>News</en>
+            <link>news</link>
+        </stuff>
+        <stuff>
+            <sk>Technická správa</sk>
+            <en>Technical report</en>
+            <link>report</link>
+        </stuff>
+        <stuff>
+            <sk>Kontakt</sk>
+            <en>Contact</en>
+            <link>contact</link>
         </stuff>
     </level_1>
 </menu>
