@@ -21,6 +21,9 @@ a {
 :after {
   font-family: FontAwesome;
 }
+ul {
+  list-style: none;
+}
 ul.redDot {
   list-style: none;
   padding: 0;
@@ -610,20 +613,12 @@ span.contentHeading {
   }
 }
 @media only screen and (max-width: 480px) {
-  h3.contentHeading {
+  .wrap {
+    padding: 0 8px;
+  }
+  h3 {
     font-size: 17px;
     padding: 16px 8px;
-  }
-  .paging {
-    margin-bottom: 0;
-  }
-  .paging > * {
-    display: block;
-    text-align: center;
-  }
-  .paging span {
-    float: none;
-    margin-top: 8px;
   }
   .bottomFooter .flexBox {
     -webkit-flex-direction: column;
@@ -639,6 +634,9 @@ span.contentHeading {
     display: list-item;
     border-right: none;
     padding: 4px 0;
+  }
+  .flexBox.contact img {
+    display: none;
   }
   .madeBy {
     font-size: 15px;
