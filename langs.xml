@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pages>
-    <test>
-        <h1>
-            <sk>Vitajte</sk>
-            <en>Welcome</en>
-        </h1>
-    </test>
+    <home>
+        <h3>
+            <sk>Vitajte na webovej stránke tímového projektu z WEBTE2</sk>
+            <en>Welcome on web page of team project from WEBTE2</en>
+        </h3>
+    </home>
+    <contact>
+        <h3>
+            <sk>Kontakty</sk>
+            <en>Contacts</en>
+        </h3>
+    </contact>
 </pages>

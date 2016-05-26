@@ -17,12 +17,31 @@ body {
 a {
   text-decoration: none;
 }
-ul {
-  list-style: none;
-}
 :before,
 :after {
   font-family: FontAwesome;
+}
+ul.redDot {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+ul.redDot li {
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+ul.redDot li:before {
+  content: "• ";
+  color: red;
+}
+img.bean {
+  width: 550px;
+  display: block;
+  margin: 0 auto;
+}
+.duo {
+  display: inline-block;
+  vertical-align: top;
 }
 .red {
   color: #ee1c25;
@@ -53,6 +72,14 @@ h3.padded {
 .flexBox {
   display: -webkit-flex;
   display: flex;
+}
+.flexBox {
+  display: -webkit-flex;
+  display: flex;
+}
+.flexBox.contact {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 .redButton {
   background-color: #ee1c25;
@@ -193,7 +220,7 @@ h3.padded {
   font-size: 10px;
   color: #ee1c25;
 }
-h3.contentHeading {
+h3 {
   text-transform: uppercase;
   display: inline-block;
   font-weight: 600;
@@ -201,9 +228,9 @@ h3.contentHeading {
   color: #424242;
   margin: 0;
   width: 100%;
-  padding: 24px 0;
+  padding: 12px 0;
 }
-h4.contentHeading {
+h4 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 16px;
