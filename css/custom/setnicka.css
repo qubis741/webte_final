@@ -42,3 +42,49 @@ fieldset {
 .left_text {
 	width: 300px;
 }
+
+.pridanie_textarea {
+	width: 298px;
+	height: 80px;
+	resize: vertical;
+}
+
+.vlajka {
+	width: 30px;
+	height: auto;
+}
+
+.vlajka_td {
+	text-align: center;
+}
+
+tr:nth-child(2n+1) {
+	background-color: lightblue;
+}
+
+#krajiny {
+	float: left;
+	margin: 0 50px 0 0;
+}
+
+.align_right_td {
+	text-align: right;
+}
+
+.menu {
+	margin: 0 20px;
+	font-weight: bold;
+	color: white;
+}
+
+.menu:hover {
+	color: red;
+}
+
+.wrap {
+	margin-bottom: 20px;
+}
+
+#sk_container {
+	float: left;	
+}

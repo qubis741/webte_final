@@ -13,7 +13,9 @@
 
 <div class="header" id="respoTrigger">
     <div class="wrap">
-        <h2 class="admin_header">Administrátor</h2>
+        <h1 class="admin_header">Administrátor</h1>
+		<a href="admin.php" class="menu">Pridanie článku</a>
+		<a href="statistika_prihlaseni.php" class="menu">Štatistika prihlásení</a>
 		<a href="logout.php" class="logout">Odhlásiť</a>
 		
         <div class="langs">
