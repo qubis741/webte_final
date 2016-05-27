@@ -1,0 +1,44 @@
+.admin_header {
+	color: #FFFFFF;
+	display:inline-block;
+}
+
+.login {
+	margin: 10px;
+}
+
+.logout {
+	margin: 0 20px;
+	color: grey;
+}
+
+.logout:visited {
+	color: grey;
+}
+
+label {
+	width: 400px;
+	text-align: right;
+	padding: 10px;
+	display: inline-block;
+}
+
+fieldset {
+	width: 1200px;
+	border-radius: 10px;
+	margin: 15px;
+}
+
+.pridanie input{
+	width: 300px;
+	background-color: lightblue;
+	margin-left: 10px;
+}
+
+.pridanie textarea {
+	background-color: lightblue;
+}
+
+.left_text {
+	width: 300px;
+}
