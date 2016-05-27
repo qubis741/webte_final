@@ -12,5 +12,4 @@ function getContentText($page,$element){
     global $langText, $lang;
     return $langText->$page->$element->$lang;
 }
-
 ?>
