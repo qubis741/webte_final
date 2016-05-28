@@ -1,3 +1,4 @@
+
 <?php
 	$link = @mysql_connect('localhost', 'kovacik1', '123456'); 
 	if(!$link){
@@ -55,7 +56,7 @@
 	    <option value="ENG">ENG</option>
 	    <option value="SK">SK</option>
 	</select>
-	<br><br><jakub@marmotcrow.com>
+	<br><br>
  	<input type="submit" value="Potvrd" name="odoberanie">
 </form>
 <br><br>
@@ -73,7 +74,7 @@
     	{
     	?>
     		
-   			<font size="-1"><span style="line-height: 0.2;"><p><?php echo  $row->headline . "</h2><p>Čas pridania: " . $row->timestamp ; ?></p></span>
+   			<font size="-1"><span style="line-height: 0.2;"><h2><?php echo  $row->headline . "</h2><p>Čas pridania: " . $row->timestamp ; ?></p></span>
    			<div class="aktuality-box">
    				<div class="aktuality-text">
    					<p><?php echo $row->text; ?></p>
