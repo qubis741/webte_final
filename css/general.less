@@ -4,7 +4,11 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: @colorText;
-
+ * {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
 }
 a {
   text-decoration: none;
@@ -84,25 +88,21 @@ h3.padded {
 }
 
 .redButton {
-  background-color: @colorRed;
-  color: @colorWhite;
-  font-size: 16px;
+  background-color: #ee1c25;
+  color: #ffffff;
+  font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
   box-sizing: border-box;
-  height: 55px;
-  padding: 18px 36px;
+  height: 30px;
+  padding: 7px 28px;
+  margin: 0 12px;
+  border: none;
 
-  &:after {
-    content: '';
-    background: transparent url("./images/w_arrow_right2.png") no-repeat center;
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    margin-top: -5px;
-    width: 10px;
-    height: 11px;
+  &:hover {
+    background-color: #DD1C25;
   }
+
 }
 .header {
   background-color: @colorBlack;
@@ -403,63 +403,13 @@ span.contentHeading {
   }
 }
 
-.paging {
-  margin: 16px 0;
-  > * {
-    vertical-align: middle;
-    display: inline-block;
-  }
 
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      display: inline-block;
-      padding-right: 8px;
-      vertical-align: middle;
-      height: 30px;
-      width: 30px;
-
-      a {
-        border: 1px solid @colorTextFooter;
-        font-size: 16px;
-        color: @colorGrayCorner;
-        height: 100%;
-        width: 100%;
-        padding: 6px;
-        box-sizing: border-box;
-        display: inline-block;
-        padding: 3px 9px;
-
-      }
-
-      &.active a{
-        border: 1px solid @colorRed;
-        background-color: @colorRed;
-        color: @colorWhite;
-      }
-
-      &.next a {
-        background: transparent url("./images/next.png") no-repeat center;
-      }
-
-      &.veryNext a {
-        background: transparent url("./images/veryNext.png") no-repeat center;
-      }
-
-      &.back a {
-        background: transparent url("./images/back.png") no-repeat center;
-      }
-
-      &.veryBack a {
-        background: transparent url("./images/veryBack.png") no-repeat center;
-      }
-    }
-  }
-
-  span {
-    float: right;
+form {
+  input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], select {
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 8px;
   }
 }
 .customSelect {

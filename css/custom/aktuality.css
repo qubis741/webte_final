@@ -14,8 +14,10 @@
 }
 
 #odoberanie-box{
-	padding: 10px 10px 10px 10px;
-	width: 200px;
-	height: 150;
+	padding: 16px;
 	background-color: #BDBDBD;
+}
+#odoberanie-box .flexBox {
+	justify-content: center;
+	align-items: center;
 }

@@ -36,18 +36,18 @@
 <h3><?php echo getContentText($page,'h3');?></h3>
 <form id="odoberanie-box" method="post">
     <b>Odoberanie noviniek</b>
-  	<br><br>
-  	Meno:<br>
-  	<input type="text" name="name"><br>
-  	Email:<br>
-  	<input type="text" name="mail"><br>
-  	Jazyk:   
-  	<select name="jazyk">
+	<div class="flexBox">
+	<label for="name">Meno:</label>
+  	<input type="text" name="name" id="name">
+	<label for="mail">Email:</label>
+  	<input type="text" name="mail" id="mail">
+	<label for="jazyk">Jazyk: </label>
+  	<select name="jazyk" id="jazyk">
 	    <option value="ENG">ENG</option>
 	    <option value="SK">SK</option>
 	</select>
-	<br><br>
- 	<input type="submit" value="Potvrd" name="odoberanie">
+ 	<input type="submit" value="Potvrd" name="odoberanie" class="redButton">
+	</div>
 </form>
 <br><br>
 <div class='aktuality'>
