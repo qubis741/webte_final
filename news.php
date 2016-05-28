@@ -49,9 +49,8 @@
 <div class='aktuality'>
 <?php
 	
-	$query = "SELECT headline" . getContentText($page,'lang') . " headline, text" . getContentText($page,'lang') ." text, timestamp FROM news ORDER BY timestamp DESC";
+	$query = "SELECT headline" . $lang . " headline, text" . $lang ." text, timestamp FROM news ORDER BY timestamp DESC";
 	echo $query;
-	echo $getContentText($page,'lang');
 	$result = @mysql_query($query);
 	if(!$result){
 	   echo('Error selecting news: ' . mysql_error());
