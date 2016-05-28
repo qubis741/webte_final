@@ -12,10 +12,10 @@
             <en>Contacts</en>
         </h3>
     </contact>
-    <aktuality>
-	<h3>
-		<sk>Aktuality:</sk>
-		<en>News:</en>
-	</h3>
-    </aktuality>
+    <news>
+        <h3>
+            <sk>Aktuality:</sk>
+            <en>News:</en>
+        </h3>
+    </news>
 </pages>

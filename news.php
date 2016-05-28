@@ -1,7 +1,4 @@
-<head>
-	<link rel="stylesheet" href="./css/custom/aktuality.css">
-</head>
-<?php 
+<?php
 	$link = @mysql_connect('localhost', 'kovacik1', '123456'); 
 	if(!$link){
 	   echo('Error connecting to the database: ' . mysql_error());
