@@ -446,13 +446,11 @@ span.contentHeading {
 }
 .respoHead .menuOn {
   background: #ee1c25 url("../images/menuOn.png") no-repeat center;
-  background-size: contain;
   height: 85px;
   width: 85px;
 }
 .menuOff {
   background: #ee1c25 url("../images/close.png") no-repeat 95% center;
-  background-size: contain;
   height: 85px;
   width: 100%;
   line-height: 88px;
