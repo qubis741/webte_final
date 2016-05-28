@@ -1,7 +1,6 @@
 <?php
 	$page = basename(__FILE__, '.php');
 
-	sendNewsToSubs();
 	if (isset($_POST['odoberanie'])) {		
 		$query = "SELECT email FROM subscribers where email = '" . $_POST['mail'] . "'";
 		echo "<br><br>";
