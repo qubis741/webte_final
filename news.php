@@ -1,13 +1,13 @@
 <head>
-	<link rel="stylesheet" href="./css/aktuality.css">
+	<link rel="stylesheet" href="./css/custom/aktuality.css">
 </head>
 <?php 
-	$link = @mysql_connect('localhost', 'mojuser', 'mojpassword'); 
+	$link = @mysql_connect('localhost', 'kovacik1', '123456'); 
 	if(!$link){
 	   echo('Error connecting to the database: ' . mysql_error());
 	   exit();
 	}
-	$db = @mysql_selectdb('prvadb');
+	$db = @mysql_selectdb('final');
 	if(!$db){
 	   echo('Error selecting database: ' . mysql_error());
 	   exit();
