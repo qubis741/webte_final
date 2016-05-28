@@ -3,14 +3,9 @@
   height: 100%;
 }
 
-.aktuality-box{
-	background-color: #D8D8D8;
-	max-width: 700px;
-}
 
 .aktuality-text{
 	font-size: 18px;
-	padding-left: 10px;
 }
 
 #odoberanie-box{
