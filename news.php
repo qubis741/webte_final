@@ -1,18 +1,8 @@
 
 <?php
-	$link = @mysql_connect('localhost', 'kovacik1', '123456'); 
-	if(!$link){
-	   echo('Error connecting to the database: ' . mysql_error());
-	   exit();
-	}
-	$db = @mysql_selectdb('final');
-	if(!$db){
-	   echo('Error selecting database: ' . mysql_error());
-	   exit();
-	}
 
-	$page = basename(__FILE__, '.php'); 
-	header('Content-Type: text/html; charset=utf-8');
+
+	$page = basename(__FILE__, '.php');
 
 
 	if (isset($_POST['odoberanie'])) {		
