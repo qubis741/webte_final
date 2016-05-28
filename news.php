@@ -73,7 +73,7 @@
     	{
     	?>
     		
-   			<font size="-1"><span style="line-height: 0.2;"><h2><?php echo  $row->headline . "</h2><p>Čas pridania: " . $row->timestamp ; ?></p></span>
+   			<font size="-1"><span style="line-height: 0.2;"><h2><?php echo  $row->headline . "</h2><p>Čas pridania: " . $row->timestamp ; ?></h2></span>
    			<div class="aktuality-box">
    				<div class="aktuality-text">
    					<p><?php echo $row->text; ?></p>
