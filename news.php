@@ -12,9 +12,9 @@
 		if(!$m){
 			mysql_query("INSERT INTO subscribers (name,email,jazyk) VALUES ('" . $_POST['name'] . "','" . $_POST['mail'] . "','" . $_POST['jazyk'] . "')") ;
 			echo "Odoberanie zaregistrovane<br>";
-		    $msg = "<html><head><meta charset=" . "UTF-8" ."></head><body><p>Prosim potrvrdte odoberanie cez mail:</p> " . "<a href='http://147.175.98.168/final/?page=aktuality&pmail=" . $_POST['mail'] . "'> Potvrdenie</a>";
+		    $msg = "<html><head><meta charset=" . "UTF-8" ."></head><body><p>Prosim potrvrdte odoberanie cez mail:</p> " . "<a href='http://147.175.98.168/final/?page=news&pmail=" . $_POST['mail'] . "'> Potvrdenie</a>";
 		    $msg = $msg . "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
-		    $msg = $msg . "<a href='http://147.175.98.168/final/?page=aktuality&zmail=" . $_POST['mail'] . "'> Zrusenie</a></body></html>";
+		    $msg = $msg . "<a href='http://147.175.98.168/final/?page=news&zmail=" . $_POST['mail'] . "'> Zrusenie</a></body></html>";
 			mail($_POST['mail'],"Odoberanie noviniek",$msg,"Content-type: text/html; charset=utf8");
 		}
 		else{
