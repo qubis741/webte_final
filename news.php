@@ -15,7 +15,7 @@
 		    $msg = "<html><head><meta charset=" . "UTF-8" ."></head><body><p>Prosim potrvrdte odoberanie cez mail:</p> " . "<a href='?page=aktuality&pmail=" . $_POST['mail'] . "'> Potvrdenie</a>";
 		    $msg = $msg . "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
 		    $msg = $msg . "<a href='?page=aktuality&zmail=" . $_POST['mail'] . "'> Zrusenie</a></body></html>";
-			mail($_POST['mail'],"Odoberanie noviniek",$msg);
+			mail($_POST['mail'],"Odoberanie noviniek",$msg,"Content-type: text/html; charset=utf8");
 		}
 		else{
 			echo "Odoberanie na tento mail je uz aktivne";
