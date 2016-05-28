@@ -1,7 +1,7 @@
 <?php
 	$page = basename(__FILE__, '.php');
 
-
+	sendNewsToSubs();
 	if (isset($_POST['odoberanie'])) {		
 		$query = "SELECT email FROM subscribers where email = '" . $_POST['mail'] . "'";
 		echo "<br><br>";
@@ -11,7 +11,6 @@
 			echo "Odoberanie zaregistrovane<br>";
 		    $msg = "<html><head><meta charset=" . "UTF-8" ."></head><body><p>Prosim potrvrdte odoberanie cez mail:</p> " . "<a href='http://147.175.98.168/final/?page=news&pmail=" . $_POST['mail'] . "'> Potvrdenie</a>";
 			mail($_POST['mail'],"Odoberanie noviniek",$msg,"Content-type: text/html; charset=utf8");
-			sendNewsToSubs();
 		}
 		else{
 			echo "Odoberanie na tento mail je uz aktivne";

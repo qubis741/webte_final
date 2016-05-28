@@ -16,10 +16,12 @@ function getContentText($page,$element){
 function sendNewsToSubs(){
 
 	$newsSK = mysql_query("SELECT headlineSK,textSK FROM news order by timestamp desc limit 1");
-	$subsSK = mysql_query("SELECT email FROM subscribers WHERE jazyk = 'SK'");
+	$subsSK = mysql_query("SELECT email FROM subscribers WHERE jazyk = 'SK' AND verification = 1");
 
 	$newsEN = mysql_query("SELECT headlineEN,textEN FROM news order by timestamp desc limit 1");
-	$subsEN = mysql_query("SELECT email FROM subscribers WHERE jazyk = 'EN'");
+	$subsEN = mysql_query("SELECT email FROM subscribers WHERE jazyk = 'EN' AND verification = 1");
+
+    echo "funkcie";
 
 
 	if (mysql_num_rows($subsSK) > 0 ){
@@ -32,7 +34,7 @@ function sendNewsToSubs(){
 			mail($row->email,$newssSK->headlineSK,$newssSK->textSK . $messg1,"Content-type: text/html; charset=utf8");
     	}
     }
-
+    
     if (mysql_num_rows($subsEN) > 0 ){
     	while($row = mysql_fetch_object($subsEN))
     	{
