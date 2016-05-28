@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <pages>
     <home>
         <h3>
@@ -12,4 +12,10 @@
             <en>Contacts</en>
         </h3>
     </contact>
+    <aktuality>
+	<h3>
+		<sk>Aktuality:</sk>
+		<en>News:</en>
+	</h3>
+    </aktuality>
 </pages>
