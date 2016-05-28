@@ -27,9 +27,9 @@ function sendNewsToSubs(){
     	{
     		$newssSK = mysql_fetch_object($newsSK)
 
-		    $msg =  "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
-		    $msg = $msg . "<a href='http://147.175.98.168/final/?page=news&zmail=" .  $row->email . "'> Zrusenie</a></body></html>";
-			mail($row->email,$newssSK->headlineSK,$newssSK->textSK . $msg,"Content-type: text/html; charset=utf8");
+		    $messg1 =  "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
+		    $messg1 = $messg1 . "<a href='http://147.175.98.168/final/?page=news&zmail=" .  $row->email . "'> Zrusenie</a></body></html>";
+			mail($row->email,$newssSK->headlineSK,$newssSK->textSK . $messg1,"Content-type: text/html; charset=utf8");
     	}
     }
 
@@ -38,9 +38,9 @@ function sendNewsToSubs(){
     	{
     		$newssEN = mysql_fetch_object($newsEN)
 
-		    $msg =  "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
-		    $msg = $msg . "<a href='http://147.175.98.168/final/?page=news&zmail=" .  $row->email . "'> Zrusenie</a></body></html>";
-			mail($row->email,$newssEN->headlineEN,$newssEN->textEN . $msg,"Content-type: text/html; charset=utf8");
+		    $messg2 =  "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
+		    $messg2 = $messg2 . "<a href='http://147.175.98.168/final/?page=news&zmail=" .  $row->email . "'> Zrusenie</a></body></html>";
+			mail($row->email,$newssEN->headlineEN,$newssEN->textEN . $messg2,"Content-type: text/html; charset=utf8");
     	}
     }
 }
