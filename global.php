@@ -25,7 +25,7 @@ function sendNewsToSubs(){
 	if (mysql_num_rows($subsSK) > 0 ){
     	while($row = mysql_fetch_object($subsSK))
     	{
-    		$newssSK = mysql_fetch_object($newsSK)
+    		$newssSK = mysql_fetch_object($newsSK);
 
 		    $messg1 =  "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
 		    $messg1 = $messg1 . "<a href='http://147.175.98.168/final/?page=news&zmail=" .  $row->email . "'> Zrusenie</a></body></html>";
@@ -36,7 +36,7 @@ function sendNewsToSubs(){
     if (mysql_num_rows($subsEN) > 0 ){
     	while($row = mysql_fetch_object($subsEN))
     	{
-    		$newssEN = mysql_fetch_object($newsEN)
+    		$newssEN = mysql_fetch_object($newsEN);
 
 		    $messg2 =  "<br><br><p>Odoberanie mozete zrusit kliknutim na tento link:</p> ";
 		    $messg2 = $messg2 . "<a href='http://147.175.98.168/final/?page=news&zmail=" .  $row->email . "'> Zrusenie</a></body></html>";
