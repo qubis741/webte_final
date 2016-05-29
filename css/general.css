@@ -43,7 +43,7 @@ ul.redDot li:before {
   color: red;
 }
 img.bean {
-  width: 550px;
+  width: 60%;
   display: block;
   margin: 0 auto;
 }
@@ -397,7 +397,7 @@ form select {
   justify-content: space-between;
   -webkit-align-items: center;
   align-items: center;
-  height: 85px;
+  height: 60px;
   border-bottom: 2px solid #ffffff;
   background: #323232;
   display: none;
@@ -410,14 +410,14 @@ form select {
 }
 .respoHead .menuOn {
   background: #ee1c25 url("../images/menuOn.png") no-repeat center;
-  height: 85px;
-  width: 85px;
+  height: 60px;
+  width: 60px;
 }
 .menuOff {
   background: #ee1c25 url("../images/close.png") no-repeat 95% center;
-  height: 85px;
+  height: 60px;
   width: 100%;
-  line-height: 88px;
+  line-height: 63px;
   color: #ffffff;
   font-weight: 600;
   font-size: 16px;
@@ -457,7 +457,7 @@ form select {
     display: flex;
   }
   .header#respoTrigger {
-    margin-top: 85px;
+    margin-top: 60px;
     border-bottom: none;
   }
   .header#respoTrigger .langs {
@@ -575,8 +575,8 @@ form select {
   }
 }
 @media only screen and (max-width: 480px) {
-  .wrap {
-    padding: 0 8px;
+  img.bean {
+    width: 100%;
   }
   h3 {
     font-size: 17px;
