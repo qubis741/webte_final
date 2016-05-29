@@ -15,6 +15,32 @@ function getContentText($page,$element){
 
 function sendNewsToSubs(){
 
+    /////////rss///////////////
+    $doc = new DomDocument();
+
+    $rss = $doc->createElement('rss');
+    $rss->setAttribute("version", "2.0");
+    $chanel = $doc->createElement('channel');
+
+    $c_language = $doc->createElement('language');
+    $c_title = $doc->createElement('title');
+    $c_text = $doc->createElement('text');
+
+    $doc->appendChild($rss);
+    $rss->appendChild($channel);
+    $channel->appendChild($c_language);
+    $channel->appendChild($c_title);
+    $channel->appendChild($c_text);
+
+    $item = $doc->createElement('item');
+    $i_title = $doc->createElement('title');
+
+
+    echo $doc->saveXML();
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //newsletters//////////////
+/*
 	$newsSK = mysql_query("SELECT headlineSK,textSK FROM news order by timestamp desc limit 1");
 	$subsSK = mysql_query("SELECT email FROM subscribers WHERE jazyk = 'SK' AND verification = 1");
 
@@ -44,6 +70,6 @@ function sendNewsToSubs(){
 		    $messg2 = $messg2 . "<a href='http://147.175.98.168/final/?page=news&zmail=" .  $row->email . "'> Zrusenie</a></body></html>";
 			mail($row->email,$newssEN->headlineEN,$newssEN->textEN . $messg2,"Content-type: text/html; charset=utf8");
     	}
-    }
+    }*/
 }
 ?>
