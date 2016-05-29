@@ -1,5 +1,6 @@
 <?php
 require_once 'admin_header.php';
+require_once 'global.php';
 ?>
 
 <?php
