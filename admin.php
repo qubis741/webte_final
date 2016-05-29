@@ -20,7 +20,7 @@ require_once 'admin_header.php';
 			$nadpis_en = $_POST['nadpis_en'];
 			$text_en = $_POST['text_en'];
 			
-			$query = "INSERT INTO aktuality (nadpis_sk, text_sk, nadpis_en, text_en) VALUES (:nadpis_sk, :text_sk, :nadpis_en, :text_en)";
+			$query = "INSERT INTO news (headlineSK, textSK, headlineEN, textEN) VALUES (:nadpis_sk, :text_sk, :nadpis_en, :text_en)";
 			$stmnt = $pdo->prepare($query);
 			$stmnt->bindParam(':nadpis_sk', $nadpis_sk, PDO::PARAM_STR);
 			$stmnt->bindParam(':text_sk', $text_sk, PDO::PARAM_STR);
@@ -28,7 +28,9 @@ require_once 'admin_header.php';
 			$stmnt->bindParam(':text_en', $text_en, PDO::PARAM_STR);
 			$stmnt->execute();
 			
-			echo $nadpis_sk;
+			sendNewsToSubs();
+			
+			echo "Článok pridaný";
 			
 		} else {
 			echo "Vyplňte prosím všetky položky";
@@ -42,7 +44,7 @@ require_once 'admin_header.php';
 ?>
 
 <?php
-require_once 'config.php';
+//require_once 'config.php';
 require_once 'global.php';
 require_once 'lokalizacia.php';
 

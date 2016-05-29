@@ -1,8 +1,8 @@
 <?php
-	$user = 'setnicka';
-	$pass = 'setnicka1';
-	$host = 'localhost';
-	$dbname = 'prvadb';
+	// $user = 'setnicka';
+	// $pass = 'setnicka1';
+	// $host = 'localhost';
+	// $dbname = 'prvadb';
 //news
 $link = @mysql_connect('localhost', 'kovacik1', '123456');
 if(!$link){

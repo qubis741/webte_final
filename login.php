@@ -45,7 +45,7 @@
 ?>
 
 <?php
-require_once 'config.php';
+//require_once 'config.php';
 require_once 'global.php';
 require_once 'db_connect.php';
 $URL_ROOT = "http://".$_SERVER['SERVER_NAME'].'/final';
