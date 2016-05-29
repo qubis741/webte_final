@@ -48,7 +48,6 @@
 <?php
 	
 	$query = "SELECT headline" . $lang . " headline, text" . $lang ." text, timestamp FROM news ORDER BY timestamp DESC";
-	echo $query;
 	$result = @mysql_query($query);
 	if(!$result){
 	   echo('Error selecting news: ' . mysql_error());
