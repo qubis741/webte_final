@@ -1,21 +1,15 @@
-
 <?php
-
-
 	$page = basename(__FILE__, '.php');
-
 
 	if (isset($_POST['odoberanie'])) {		
 		$query = "SELECT email FROM subscribers where email = '" . $_POST['mail'] . "'";
 		echo "<br><br>";
-		$m = mysql_fetch_object(mysql_query($query))->email;
-		if(!$m){
+		$m = mysql_query($query);
+		if(mysql_num_rows($m) < 1){
 			mysql_query("INSERT INTO subscribers (name,email,jazyk) VALUES ('" . $_POST['name'] . "','" . $_POST['mail'] . "','" . $_POST['jazyk'] . "')") ;
 			echo "Odoberanie zaregistrovane<br>";
-		    $msg = "Prosim potrvrdte odoberanie cez mail: " . "<a href='?page=aktuality&pmail=" . $_POST['mail'] . "'> Potvrdenie</a>";
-		    $msg = $msg . "<br><br>Odoberanie mozete zrusit kliknutim na tento link: ";
-		    $msg = $msg . "<a href='?page=aktuality&zmail=" . $_POST['mail'] . "'> Zrusenie</a>";
-			mail($_POST['mail'],"Odoberanie noviniek",$msg);
+		    $msg = "<html><head><meta charset=" . "UTF-8" ."></head><body><p>Prosim potrvrdte odoberanie cez mail:</p> " . "<a href='http://147.175.98.168/final/?page=news&pmail=" . $_POST['mail'] . "'> Potvrdenie</a>";
+			mail($_POST['mail'],"Odoberanie noviniek",$msg,"Content-type: text/html; charset=utf8");
 		}
 		else{
 			echo "Odoberanie na tento mail je uz aktivne";
@@ -53,7 +47,7 @@
 <div class='aktuality'>
 <?php
 	
-	$query = "SELECT headline, text, timestamp FROM news ORDER BY timestamp DESC";
+	$query = "SELECT headline" . $lang . " headline, text" . $lang ." text, timestamp FROM news ORDER BY timestamp DESC";
 	$result = @mysql_query($query);
 	if(!$result){
 	   echo('Error selecting news: ' . mysql_error());
