@@ -20,7 +20,6 @@
     <!--<input type="submit" name="Submittt"value="Vypočítaj deriváciu" class="redButton">-->
   </form>
   <a href="./export.csv" style="<?php if(empty($_POST['Submitt']) && empty($_POST['Submittt'])) echo 'display:none;'?> margin: 6px 0 ;" class="redButton">Exportujte do CSV</a>
-
   <div id="curve_chart" style="width: 900px; height: 500px"></div>
   <div id="curve_chart_2" style="width: 900px; height: 500px"></div>
 
@@ -28,7 +27,7 @@
 
 <?php       
     require_once 'json-rpc/jsonRPCClient.php';
-    $fnc = new jsonRPCClient('http://147.175.98.147/final_zaloha/json-rpc/server.php'); 
+    $fnc = new jsonRPCClient('http://147.175.98.147/final_zaloha/json-rpc/server.php');
 
   
   if (!empty($_POST['Submitt'])) {

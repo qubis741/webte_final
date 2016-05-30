@@ -1,1 +1,1 @@
-druhe riesenie vypoctu
+Druhe riesenie neexistuje

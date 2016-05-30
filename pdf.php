@@ -1,17 +1,7 @@
 <script src="js/xepOnline.jqPlugin.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-
-<div id="text">
-    <h2>Super nadpis</h2>
-    <p>
- 	Toto je nieco specialne...
-	</p>
-</div>
-
-
-<!-- hodnotu 'text' treba zmenit na ID DIVu ktory chceme vygenerovat do formatu PDF !!! -->    
-<a href="#" onclick="return xepOnline.Formatter.Format('text',{render:'download'});">
+<!-- hodnotu 'text' treba zmenit na ID DIVu ktory chceme vygenerovat do formatu PDF !!! -->
+<a href="#" onclick="return xepOnline.Formatter.Format('text',{render:'download'});" class="redButton">
 Vygeneruj PDF
 </a>
 

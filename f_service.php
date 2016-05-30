@@ -1,7 +1,9 @@
-<h3 class="contentHeading"><span class="red"><?php echo getContentText('f_service','h3');?></span></h3>
+<div id="text"><h3 class="contentHeading"><span class="red"><?php echo getContentText('f_service','h3');?></span></h3>
 <p>Služba je vytvorená prostredníctvom JSON-RPC, pre výpočet je potrebné zadať API kľúč (abc123), zadať rozsah pre os x, pre ktore sa ma hodnota vypočítať a samozrejem funkciu, pre ktorú bude tento výpočet urobený.
 	Následne stačí stlačiť tlačidlo pre výpočet hodnôt, resp. pre výpočet derivácie. Záleží od toho, ktoré hodnoty potrebujete.</p>
-<form method="POST" class="service">
+</div>
+<?php require_once 'pdf.php'?>
+<!--<form method="POST" class="service">
   Zadajte výraz:<br>
   <input type="text" name="expression" value="x+3"><br>
    Zadajte API kľúč:<br>
@@ -17,7 +19,7 @@
  
 
 
-<?php 			
+<?php /*
 		require_once 'json-rpc/jsonRPCClient.php';
 		$fnc = new jsonRPCClient('http://147.175.98.168/final/json-rpc/server.php');	
 
@@ -56,7 +58,8 @@
 	}
 		
 			
-?>
+*/?>
 
 
-<a href="./export.csv" style="<?php if(empty($_POST['Submitt']) && empty($_POST['Submittt'])) echo 'display:none;'?> margin: 6px 0 ;" class="redButton">Exportujte do CSV</a>
+<a href="./export.csv" style="<?php /*if(empty($_POST['Submitt']) && empty($_POST['Submittt'])) echo 'display:none;'*/?> margin: 6px 0 ;" class="redButton">Exportujte do CSV</a>
+-->

@@ -43,7 +43,7 @@
 	    <option value="EN">EN</option>
 	    <option value="SK">SK</option>
 	</select>
- 	<input type="submit" value=<?php echo getContentText($page,'potvrd'); ?> name="odoberanie" class="redButton">
+ 	<input type="submit" value=<?php echo getContentText($page,'potvrd'); ?> name="odoberanie" class="redButton" style="margin-left: 12px;">
 	</div>
 </form>
 <br><br>
