@@ -1,3 +1,4 @@
+
 <h3 class="contentHeading"><span class="red"><?php echo getContentText('contact','h3');?></span></h3>
 <div class="flexBox contact">
 

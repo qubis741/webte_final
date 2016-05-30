@@ -27,9 +27,9 @@
 	}
 ?>
 
-<h3><?php echo getContentText($page,'h3');?></h3>
+<h3><span class="red"><?php echo getContentText($page,'h3');?></span></h3>
 <a href="rss.xml" target="_blank">
-  <img src="/images/rss.png" alt="RSS">
+  <img src="./images/rss.png" alt="RSS" height="60" width="60">
 </a>
 <form id="odoberanie-box" method="post">
     <b>Odoberanie noviniek</b>
@@ -40,7 +40,7 @@
   	<input type="text" name="mail" id="mail">
 	<label for="jazyk">Jazyk: </label>
   	<select name="jazyk" id="jazyk">
-	    <option value="ENG">ENG</option>
+	    <option value="EN">EN</option>
 	    <option value="SK">SK</option>
 	</select>
  	<input type="submit" value="Potvrd" name="odoberanie" class="redButton">

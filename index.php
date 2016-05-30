@@ -14,7 +14,7 @@ else {
 require_once 'header.php';
 ?>
 <div>
-    <div class="wrap">
+    <div class="wrap" style="padding: 16px 0;">
         <?php
         switch($page) {
             case 'home':

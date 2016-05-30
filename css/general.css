@@ -363,7 +363,7 @@ form input[type="tel"],
 form input[type="url"],
 form input[type="text"],
 form select {
-  border: none;
+  border: 1px solid black;
   height: 30px;
   line-height: 30px;
   padding-left: 8px;
