@@ -6,17 +6,20 @@
   </head>
   <body>
    
-  <form method="POST">
+
+  <form method="POST" class="service">
     Zadajte výraz:<br>
     <input type="text" name="expression" value="x+3"><br>
-     Zadajte API kľúč:<br>
+    Zadajte API kľúč:<br>
     <input type="text" name="API" ><br>
-     Zadajte začiatočnú súradnicu:<br>
+    Zadajte začiatočnú súradnicu:<br>
     <input type="number" name="x1" value="0"><br>
     Zadajte poslednú súradnicu:<br>
-    <input type="number" name="x2" value="20"><br>  
-    <input type="submit" name="Submitt"value="Vypočítaj hodnoty">
+    <input type="number" name="x2" value="20"><br>
+    <input type="submit" name="Submitt"value="Vypočítaj hodnoty" class="redButton">
+    <!--<input type="submit" name="Submittt"value="Vypočítaj deriváciu" class="redButton">-->
   </form>
+  <a href="./export.csv" style="<?php if(empty($_POST['Submitt']) && empty($_POST['Submittt'])) echo 'display:none;'?> margin: 6px 0 ;" class="redButton">Exportujte do CSV</a>
 
   <div id="curve_chart" style="width: 900px; height: 500px"></div>
   <div id="curve_chart_2" style="width: 900px; height: 500px"></div>
@@ -39,6 +42,10 @@
     
     $x1_fnc = $x1;
     $x2_fnc = $x2;
+    $file = fopen('./export.csv',"w");
+    fputcsv($file,$result,";");
+    fclose($file);
+
   }
 ?>
 
