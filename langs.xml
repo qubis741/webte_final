@@ -17,6 +17,30 @@
             <sk>Aktuality:</sk>
             <en>News:</en>
         </h3>
+    	<odoberania>
+            <sk>Odoberanie noviniek</sk>
+            <en>Subscribing</en>
+    	</odoberania>
+    	<jazyk>
+            <sk>Jazyk:</sk>
+            <en>Lang.:</en>
+    	</jazyk>
+        <meno>
+            <sk>Meno:</sk>
+            <en>Name:</en>
+        </meno>
+        <email>
+            <sk>Email:</sk>
+            <en>Email:</en>
+        </email>
+        <potvrd>
+            <sk>Potvrd</sk>
+            <en>Submit</en>
+        </potvrd>
+        <cas>
+            <sk>Cas:</sk>
+            <en>Time:</en>
+        </cas>
     </news>
     <f_service>
         <h3>
