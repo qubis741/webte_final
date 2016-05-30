@@ -55,7 +55,7 @@
 	
 	
 	if (!empty($_POST['Submit'])) {
-		
+
 		header('Content-Type: application/csv');
 		header('Content-Disposition: attachment; filename="export.csv";');
 		if(!isset($_SESSION)) {
@@ -63,15 +63,15 @@
 		}
 		$arr = $_SESSION['csv'];
 
-		$file = fopen('php://output',"w");
+		/*$file = fopen('php://output',"w");
+		fwrite($file,"");
+		//fputcsv($file,$arr,",");
 
-		foreach ($arr as $line)
-		  {
-		  fputcsv($file,explode(' ',$line));
-		  }
+		fclose($file);*/
+		foreach($arr as $ar){
+			print $ar.",";
+		}
 
-		fclose($file);
-		session_destroy();
 
 	} 
 		
