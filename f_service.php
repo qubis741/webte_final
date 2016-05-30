@@ -10,8 +10,8 @@
   <input type="number" name="x1" value="0"><br>
   Zadajte poslednú súradnicu:<br>
   <input type="number" name="x2" value="20"><br>  
-  <input type="submit" name="Submitt"value="Vypočítaj hodnoty">
-  <input type="submit" name="Submittt"value="Vypočítaj deriváciu">
+  <input type="submit" name="Submitt"value="Vypočítaj hodnoty" class="redButton">
+  <input type="submit" name="Submittt"value="Vypočítaj deriváciu" class="redButton">
 </form>
 
  
@@ -27,9 +27,11 @@
 		$x1= $_POST['x1'];
 		$x2 = $_POST['x2'];
 		$api = $_POST['API'];
-		var_dump($_POST['API']);
 		$result = $fnc->pocitajJSON($api, $x1, $x2, $expression);
-			echo "Arr1: result is: ";
+			//echo "Arr1: result is: ";
+		$file = fopen('./export.csv',"w");
+		fputcsv($file,$result,";");
+		fclose($file);
 	
 	}
 	
@@ -40,7 +42,7 @@
 		$api = $_POST['API'];
 		
 		$result = $fnc->pocitajJSONderivacia($api, $x1, $x2, $expression);
-			echo "Arr1: result is: ";
+			//echo "Arr1: result is: ";
 	
 	}
 		
@@ -49,39 +51,12 @@
 			session_start();
 		}
 					$_SESSION['csv'] = $result;
-					print_r($result);
+					//print_r($result);
 					
 	}
-	
-	
-	if (!empty($_POST['Submit'])) {
-
-		header('Content-Type: application/csv');
-		header('Content-Disposition: attachment; filename="export.csv";');
-		if(!isset($_SESSION)) {
-			session_start();
-		}
-		$arr = $_SESSION['csv'];
-
-		/*$file = fopen('php://output',"w");
-		fwrite($file,"");
-		//fputcsv($file,$arr,",");
-
-		fclose($file);*/
-		foreach($arr as $ar){
-			print $ar.",";
-		}
-
-
-	} 
 		
 			
 ?>
 
 
-
-
-<form method="POST">
-  Exportujte do CSV:<br>
-  <input type="submit" name="Submit"value="Export">
-</form>
+<a href="./export.csv" style="<?php if(empty($_POST['Submitt']) && empty($_POST['Submittt'])) echo 'display:none;'?> margin: 6px 12px;" class="redButton">Exportujte do CSV</a>
