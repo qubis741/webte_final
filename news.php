@@ -29,7 +29,7 @@
 
 <h3><?php echo getContentText($page,'h3');?></h3>
 <a href="rss.xml" target="_blank">
-  <img src="/images/rss.png" alt="RSS">
+  <img src="./images/rss.png" alt="RSS">
 </a>
 <form id="odoberanie-box" method="post">
     <b>Odoberanie noviniek</b>
