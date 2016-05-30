@@ -5,7 +5,7 @@
 Copyright 2007 Sergio Vaccaro <sergio@inservibile.org>
 
 This file is part of JSON-RPC PHP.
-
+ 
 JSON-RPC PHP is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or

@@ -11,7 +11,7 @@
   <input type="submit" name="Submittt"value="Vypočítaj deriváciu">
 </form>
 
-
+ 
 
 
 <?php 			
