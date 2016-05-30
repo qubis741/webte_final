@@ -27,7 +27,7 @@
 		$x1= $_POST['x1'];
 		$x2 = $_POST['x2'];
 		$api = $_POST['API'];
-		
+		var_dump($_POST['API']);
 		$result = $fnc->pocitajJSON($api, $x1, $x2, $expression);
 			echo "Arr1: result is: ";
 	
