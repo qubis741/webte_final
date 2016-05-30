@@ -18,4 +18,10 @@
             <en>News:</en>
         </h3>
     </news>
+    <f_service>
+        <h3>
+            <sk>Služba cez JSONRPC </sk>
+            <en>Service via JSONRPC </en>
+        </h3>
+    </f_service>
 </pages>

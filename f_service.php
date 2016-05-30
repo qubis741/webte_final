@@ -1,3 +1,4 @@
+<h3 class="contentHeading"><span class="red"><?php echo getContentText('f_service','h3');?></span></h3>
 <form method="POST">
   Zadajte výraz:<br>
   <input type="text" name="expression" value="x+3"><br>
