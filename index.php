@@ -1,6 +1,7 @@
 <?php
 require_once 'config.php';
 require_once 'global.php';
+require_once 'lokalizacia.php';
 $URL_ROOT = "http://".$_SERVER['SERVER_NAME'].'/final';
 if(isset($_GET['page'])){
         $page = $_GET['page'];
