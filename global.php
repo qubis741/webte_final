@@ -3,10 +3,16 @@ require_once 'config.php';
 if(isset($_GET['lang'])){
     $_SESSION['lang'] = $_GET['lang'];
 }
-if(isset($_SESSION['lang']))
+if(isset($_SESSION['lang'])){
     $lang = $_SESSION['lang'];
-else
+    createRSS();
+}
+
+else{
     $lang = 'sk';
+    reateRSS();
+}
+
 
 $langText = simplexml_load_file('langs.xml');
 
