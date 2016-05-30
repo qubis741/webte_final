@@ -42,7 +42,9 @@
 	}
 		
 	if(isset($result )) {
-					session_start();
+		if(!isset($_SESSION)) {
+			session_start();
+		}
 					$_SESSION['csv'] = $result;
 					print_r($result);
 					
