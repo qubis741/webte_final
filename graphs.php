@@ -20,8 +20,8 @@
     <!--<input type="submit" name="Submittt"value="Vypočítaj deriváciu" class="redButton">-->
   </form>
   <a href="./export.csv" style="<?php if(empty($_POST['Submitt']) && empty($_POST['Submittt'])) echo 'display:none;'?> margin: 6px 0 ;" class="redButton">Exportujte do CSV</a>
-  <div id="curve_chart" style="width: 900px; height: 500px"></div>
-  <div id="curve_chart_2" style="width: 900px; height: 500px"></div>
+  <div id="curve_chart" style="width: 900px; height: 500px;display: none;"></div>
+  <div id="curve_chart_2" style="width: 900px; height: 500px;display: none;"></div>
 
 
 
@@ -88,6 +88,7 @@
             j = j + 0.1;
           }
         };
+        $('#curve_chart').show();
         chart.draw(data, options);
 
         //funkcionalita pre derivaciu
@@ -125,6 +126,7 @@
             j = j + 0.1;
           }
         };
+        $('#curve_chart_2').show();
         chart1.draw(data1, options1);
       }
     </script>

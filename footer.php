@@ -2,6 +2,7 @@
     <div class="wrap flexBox">
         <ul class="semibold">
             <li><a href="#">Copyright © <span class="red">WEBTE</span></a></li>
+            <li><a href="login.php">Admin</a></li>
         </ul>
         <a href="#" target="_blank" class="madeBy">
             Website by <span class="uppercase">Tim B-19</span>

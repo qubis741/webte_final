@@ -17,7 +17,7 @@
 		<a href="admin.php" class="menu">Pridanie článku</a>
 		<a href="statistika_prihlaseni.php" class="menu">Štatistika prihlásení</a>
 		<a href="logout.php" class="logout">Odhlásiť</a>
-		
+        <a href="index.php" class="menu">Stránka</a>
         <div class="langs">
             <a href="?lang=sk">SK</a> |
             <a href="?lang=en">ENG</a>
