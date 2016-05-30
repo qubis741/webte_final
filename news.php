@@ -27,23 +27,23 @@
 	}
 ?>
 
-<h3><span class="red"><?php echo getContentText($page,'h3');?></span></h3>
+<h3><span class="red"><?php echo getContentText($news,'h3');?></span></h3>
 <a href="rss.xml" target="_blank">
   <img src="./images/rss.png" alt="RSS" height="60" width="60">
 </a>
 <form id="odoberanie-box" method="post">
-    <b>Odoberanie noviniek</b>
+    <b><?php echo getContentText($news,'odoberania'); ?></b>
 	<div class="flexBox">
-	<label for="name">Meno:</label>
+	<label for="name"><?php echo getContentText($news,'meno'); ?></label>
   	<input type="text" name="name" id="name">
-	<label for="mail">Email:</label>
+	<label for="mail"><?php echo getContentText($news,'email'); ?></label>
   	<input type="text" name="mail" id="mail">
-	<label for="jazyk">Jazyk: </label>
+	<label for="jazyk"><?php echo getContentText($news,'jazyk'); ?> </label>
   	<select name="jazyk" id="jazyk">
 	    <option value="EN">EN</option>
 	    <option value="SK">SK</option>
 	</select>
- 	<input type="submit" value="Potvrd" name="odoberanie" class="redButton">
+ 	<input type="submit" value=<?php echo getContentText($news,'potvrd'); ?> name="odoberanie" class="redButton">
 	</div>
 </form>
 <br><br>
@@ -61,7 +61,7 @@
     	{
     	?>
     		
-   			<font size="-1"><span style="line-height: 0.2;"><h2><?php echo  $row->headline . "</h2><p>Čas pridania: " . $row->timestamp ; ?></p></span>
+   			<font size="-1"><span style="line-height: 0.2;"><h2><?php echo  $row->headline . "</h2><p>" . getContentText($news,'cas') . " . $row->timestamp ; ?></p></span>
    			<div class="aktuality-box">
    				<div class="aktuality-text">
    					<p><?php echo $row->text; ?></p>
