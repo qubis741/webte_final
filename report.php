@@ -1,0 +1,1 @@
+technicka dokumentacia, rozdelenie uloh atd
