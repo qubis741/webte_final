@@ -3,8 +3,8 @@
 class fnc {
 	
 	public function pocitajJSON($api, $x1, $x2, $exp) {
-		 
-		if ($api == 'abc123') {
+		global $apiKey;
+		if ($api == $apiKey) {
 			$str = str_replace("/"," ./",$exp);
 			$str2 = str_replace("^"," .^",$str);
 			
