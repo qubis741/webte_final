@@ -40,7 +40,7 @@
   	<input type="text" name="mail" id="mail">
 	<label for="jazyk">Jazyk: </label>
   	<select name="jazyk" id="jazyk">
-	    <option value="EN">ENG</option>
+	    <option value="EN">EN</option>
 	    <option value="SK">SK</option>
 	</select>
  	<input type="submit" value="Potvrd" name="odoberanie" class="redButton">

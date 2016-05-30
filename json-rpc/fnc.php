@@ -1,5 +1,5 @@
 <?php
-
+require_once '../config.php';
 class fnc {
 	
 	public function pocitajJSON($api, $x1, $x2, $exp) {
