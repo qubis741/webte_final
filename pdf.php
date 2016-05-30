@@ -4,20 +4,11 @@
 <a href="#" onclick="return xepOnline.Formatter.Format('text',{render:'download'});" class="redButton">
 Vygeneruj PDF
 </a>
-
-
-
-<div id="edit_content">
-<p>This is a test sd as sda
-sadsadsa
-</p>    
-</div>
-
-<button id="clickme">Vygeneruj super ebook</button>
+<button id="clickme" class="redButton">Vygeneruj super ebook</button>
 
 <script>
 <!-- edit_content treba nahradit ID DIVu ktory chceme generovat -->
-var htmlData = $('#edit_content').html();
+var htmlData = $('#text').html();
 
 // bind to the button with clickme ID
 $("button#clickme").click(function() {
