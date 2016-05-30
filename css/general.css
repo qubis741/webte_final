@@ -88,6 +88,8 @@ h3.padded {
 .flexBox.contact {
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
 }
 .redButton {
   background-color: #ee1c25;

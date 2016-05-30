@@ -41,9 +41,14 @@
     
     $x1_fnc = $x1;
     $x2_fnc = $x2;
-    $file = fopen('./export.csv',"w");
-    fputcsv($file,$result,";");
-    fclose($file);
+    if(is_string($result)){
+      echo $result;
+    }
+    else {
+      $file = fopen('./export.csv', "w");
+      fputcsv($file, $result, ";");
+      fclose($file);
+    }
 
   }
 ?>
