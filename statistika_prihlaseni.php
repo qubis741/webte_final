@@ -1,5 +1,8 @@
 <?php
-	session_start();
+	
+	if(!isset($_SESSION)) {
+		session_start();
+	}
 	
 	if(!isset($_SESSION['session_username'])) {
 		header("Location: login.php");
@@ -14,7 +17,7 @@ require_once 'admin_header.php';
 ?>
 
 <?php
-require_once 'config.php';
+//require_once 'config.php';
 require_once 'global.php';
 require_once 'lokalizacia.php';
 
@@ -35,7 +38,7 @@ else {
 				<table id="navstevy">
 					<tr><th>Krajina</th><th>Zástava</th><th>Počet návštevníkov</th></tr>
 					<?php
-						$query = "SELECT stat, COUNT(stat) as pocet FROM Navstevy_stranok_final GROUP BY stat";
+						$query = "SELECT stat, COUNT(stat) as pocet FROM Navstevy_stranok GROUP BY stat";
 						$stmnt = $pdo->prepare($query);
 						$stmnt->execute();
 						
@@ -54,7 +57,7 @@ else {
 				<table id="navstevy">
 					<tr><th>Ip adresa</th><th>Štát</th><th>Mesto</th></tr>
 					<?php
-						$query = "SELECT ip_adresa, stat, mesto FROM Navstevy_stranok_final";
+						$query = "SELECT ip_adresa, stat, mesto FROM Navstevy_stranok";
 						$stmnt = $pdo->prepare($query);
 						$stmnt->execute();
 						

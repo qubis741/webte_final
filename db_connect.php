@@ -1,6 +1,9 @@
 <?php
 
-	require_once('config.php');
+	$user = 'kovacik1';
+	$pass = '123456';
+	$host = 'localhost';
+	$dbname = 'final';
 
 
 try {
