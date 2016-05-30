@@ -59,16 +59,10 @@ function sendNewsToSubs(){
     $subsEN = mysql_query("SELECT email FROM subscribers WHERE jazyk = 'EN' AND verification = 1");
 
 
-
-  
-
-
-
     if (mysql_num_rows($subsSK) > 0 ){
+        $newssSK = mysql_fetch_object($newsSK);
         while($row = mysql_fetch_object($subsSK))
         {
-            $newssSK = mysql_fetch_object($newsSK);
-
             $dataSK = '<?xml version="1.0" encoding="UTF-8" ?>';
             $dataSK .= '<rss version="2.0">';
                     $dataSK .= '<channel>';
@@ -92,10 +86,9 @@ function sendNewsToSubs(){
     }
     
     if (mysql_num_rows($subsEN) > 0 ){
+        $newssEN = mysql_fetch_object($newsEN);
         while($row = mysql_fetch_object($subsEN))
         {
-            $newssEN = mysql_fetch_object($newsEN);
-
             $dataEN = '<?xml version="1.0" encoding="UTF-8" ?>';
             $dataEN .= '<rss version="2.0">';
                     $dataEN .= '<channel>';
