@@ -4,18 +4,44 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: @colorText;
-
+ * {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
 }
 a {
   text-decoration: none;
 }
-ul {
-  list-style: none;
-}
 :before, :after {
   font-family: FontAwesome;
 }
+ul {
+  list-style: none;
+}
+ul.redDot {
+  list-style: none;
+  padding:0;
+  margin:8px 0;
+  li {
+    padding-left: 1em;
+    text-indent: -.7em;
+  }
 
+  li:before {
+    content: "• ";
+    color: red;
+  }
+}
+img.bean {
+  width: 60%;
+  display: block;
+  margin:0 auto;
+}
+.duo {
+  display: inline-block;
+  vertical-align: top;
+}
 .red {
   color: @colorRed;
 }
@@ -50,26 +76,33 @@ h3.padded {
 
   }
 }
+
+.flexBox {
+  display: -webkit-flex;
+  display: flex;
+
+  &.contact {
+    -webkit-justify-content: space-between;
+    justify-content:space-between;
+  }
+}
+
 .redButton {
-  background-color: @colorRed;
-  color: @colorWhite;
-  font-size: 16px;
+  background-color: #ee1c25;
+  color: #ffffff;
+  font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
   box-sizing: border-box;
-  height: 55px;
-  padding: 18px 36px;
+  height: 30px;
+  padding: 7px 28px;
+  margin: 0 12px;
+  border: none;
 
-  &:after {
-    content: '';
-    background: transparent url("./images/w_arrow_right2.png") no-repeat center;
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    margin-top: -5px;
-    width: 10px;
-    height: 11px;
+  &:hover {
+    background-color: #DD1C25;
   }
+
 }
 .header {
   background-color: @colorBlack;
@@ -210,7 +243,7 @@ h3.padded {
   }
 }
 
-h3.contentHeading {
+h3{
   text-transform: uppercase;
   display: inline-block;
   font-weight: 600;
@@ -218,9 +251,9 @@ h3.contentHeading {
   color: @colorText;
   margin: 0;
   width: 100%;
-  padding: 24px 0;
+  padding: 12px 0;
 }
-h4.contentHeading{
+h4{
   text-transform: uppercase;
   font-weight: bold;
   font-size: 16px;
@@ -370,63 +403,13 @@ span.contentHeading {
   }
 }
 
-.paging {
-  margin: 16px 0;
-  > * {
-    vertical-align: middle;
-    display: inline-block;
-  }
 
-  ul {
-    padding: 0;
-    margin: 0;
-
-    li {
-      display: inline-block;
-      padding-right: 8px;
-      vertical-align: middle;
-      height: 30px;
-      width: 30px;
-
-      a {
-        border: 1px solid @colorTextFooter;
-        font-size: 16px;
-        color: @colorGrayCorner;
-        height: 100%;
-        width: 100%;
-        padding: 6px;
-        box-sizing: border-box;
-        display: inline-block;
-        padding: 3px 9px;
-
-      }
-
-      &.active a{
-        border: 1px solid @colorRed;
-        background-color: @colorRed;
-        color: @colorWhite;
-      }
-
-      &.next a {
-        background: transparent url("./images/next.png") no-repeat center;
-      }
-
-      &.veryNext a {
-        background: transparent url("./images/veryNext.png") no-repeat center;
-      }
-
-      &.back a {
-        background: transparent url("./images/back.png") no-repeat center;
-      }
-
-      &.veryBack a {
-        background: transparent url("./images/veryBack.png") no-repeat center;
-      }
-    }
-  }
-
-  span {
-    float: right;
+form {
+  input:not([type]), input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], select {
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 8px;
   }
 }
 .customSelect {
@@ -476,7 +459,6 @@ span.contentHeading {
 
   .menuOn {
     background: @colorRed url("../images/menuOn.png") no-repeat center;
-    background-size: contain;
     height: @respoMenuHeight;
     width: @respoMenuHeight;
 
@@ -486,10 +468,9 @@ span.contentHeading {
 }
 .menuOff {
   background: @colorRed url("../images/close.png") no-repeat 95% center;
-  background-size: contain;
   height: @respoMenuHeight;
   width: 100%;
-  line-height: 88px; //@respoMenuHeight +3
+  line-height: 63px; //@respoMenuHeight +3
   color: @colorWhite;
   font-weight: 600;
   font-size: 16px;
@@ -569,7 +550,7 @@ span.contentHeading {
       min-width: 250px;
       height: 100%;
       position: fixed;
-      top: -4px;
+      top: -6px;
       right: -100%;
       z-index: 6;
       padding: 0 0 100px;
@@ -667,20 +648,12 @@ span.contentHeading {
   }
 }
 @media only screen and (max-width: 480px) {
-  h3.contentHeading {
+  img.bean {
+    width:100%;
+  }
+  h3{
     font-size: 17px;
     padding: 16px 8px;
-  }
-  .paging {
-    margin-bottom: 0;
-    > * {
-      display: block;
-      text-align: center;
-    }
-    span {
-      float: none;
-      margin-top: 8px;
-    }
   }
   .bottomFooter .flexBox{
     -webkit-flex-direction: column;
@@ -695,6 +668,14 @@ span.contentHeading {
         border-right: none;
         padding: 4px 0;
 
+      }
+    }
+  }
+  .flexBox {
+
+    &.contact {
+      img {
+        display: none;
       }
     }
   }

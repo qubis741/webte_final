@@ -1,14 +1,14 @@
 <form method="POST">
-  Zadajte vÃ½raz:<br>
+  Zadajte vıraz:<br>
   <input type="text" name="expression" value="x+3"><br>
-   Zadajte API kÄ¾ÃºÄ:<br>
+   Zadajte API k¾úè:<br>
   <input type="text" name="API" ><br>
-   Zadajte zaÄiatoÄnÃº sÃºradnicu:<br>
+   Zadajte zaèiatoènú súradnicu:<br>
   <input type="number" name="x1" value="0"><br>
-  Zadajte poslednÃº sÃºradnicu:<br>
+  Zadajte poslednú súradnicu:<br>
   <input type="number" name="x2" value="20"><br>  
-  <input type="submit" name="Submitt"value="VypoÄÃ­taj hodnoty">
-  <input type="submit" name="Submittt"value="VypoÄÃ­taj derivÃ¡ciu">
+  <input type="submit" name="Submitt"value="Vypoèítaj hodnoty">
+  <input type="submit" name="Submittt"value="Vypoèítaj deriváciu">
 </form>
 
  

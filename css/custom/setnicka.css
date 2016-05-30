@@ -1,0 +1,90 @@
+.admin_header {
+	color: #FFFFFF;
+	display:inline-block;
+}
+
+.login {
+	margin: 10px;
+}
+
+.logout {
+	margin: 0 20px;
+	color: grey;
+}
+
+.logout:visited {
+	color: grey;
+}
+
+label {
+	width: 400px;
+	text-align: right;
+	padding: 10px;
+	display: inline-block;
+}
+
+fieldset {
+	width: 1200px;
+	border-radius: 10px;
+	margin: 15px;
+}
+
+.pridanie input{
+	width: 300px;
+	background-color: lightblue;
+	margin-left: 10px;
+}
+
+.pridanie textarea {
+	background-color: lightblue;
+}
+
+.left_text {
+	width: 300px;
+}
+
+.pridanie_textarea {
+	width: 298px;
+	height: 80px;
+	resize: vertical;
+}
+
+.vlajka {
+	width: 30px;
+	height: auto;
+}
+
+.vlajka_td {
+	text-align: center;
+}
+
+tr:nth-child(2n+1) {
+	background-color: lightblue;
+}
+
+#krajiny {
+	float: left;
+	margin: 0 50px 0 0;
+}
+
+.align_right_td {
+	text-align: right;
+}
+
+.menu {
+	margin: 0 20px;
+	font-weight: bold;
+	color: white;
+}
+
+.menu:hover {
+	color: red;
+}
+
+.wrap {
+	/*margin-bottom: 20px;// sorry blbne to*/
+}
+
+#sk_container {
+	float: left;	
+}
