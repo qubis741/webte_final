@@ -5,12 +5,12 @@ if(isset($_GET['lang'])){
 }
 if(isset($_SESSION['lang'])){
     $lang = $_SESSION['lang'];
-    createRSS();
+    //createRSS();
 }
 
 else{
     $lang = 'sk';
-    reateRSS();
+    //createRSS();
 }
 
 
@@ -116,4 +116,5 @@ function sendNewsToSubs(){
     }
 
 }
+createRSS();
 ?>

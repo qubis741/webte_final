@@ -5,7 +5,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </head>
   <body>
-  
+   
   <form method="POST">
     Zadajte výraz:<br>
     <input type="text" name="expression" value="x+3"><br>
@@ -16,7 +16,6 @@
     Zadajte poslednú súradnicu:<br>
     <input type="number" name="x2" value="20"><br>  
     <input type="submit" name="Submitt"value="Vypočítaj hodnoty">
-    <input type="submit" name="Submittt"value="Vypočítaj deriváciu">
   </form>
 
   <div id="curve_chart" style="width: 900px; height: 500px"></div>

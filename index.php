@@ -21,7 +21,7 @@ require_once 'header.php';
                 require_once 'home.php';
                 break;
             case 'app':
-                require_once 'application.php';
+                require_once 'graphs.php';
                 break;
             case 'f_service':
                 require_once 'f_service.php';
