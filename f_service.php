@@ -58,7 +58,9 @@
 		
 		header('Content-Type: application/csv');
 		header('Content-Disposition: attachment; filename="export.csv";');
-		session_start();
+		if(!isset($_SESSION)) {
+			session_start();
+		}
 		$arr = $_SESSION['csv'];
 
 		$file = fopen('php://output',"w");
