@@ -24,4 +24,10 @@
             <en>Service via JSONRPC </en>
         </h3>
     </f_service>
+    <report>
+        <h3>
+            <sk>Technická dokumentácia </sk>
+            <en>Technical report</en>
+        </h3>
+    </report>
 </pages>
