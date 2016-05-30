@@ -16,7 +16,7 @@
 
 <?php 			
 		require_once 'json-rpc/jsonRPCClient.php';
-		$fnc = new jsonRPCClient('http://147.175.98.147/final_zaloha/json-rpc/server.php');	
+		$fnc = new jsonRPCClient('http://147.175.98.168/final/json-rpc/server.php');	
 
 	
 	if (!empty($_POST['Submitt'])) {
