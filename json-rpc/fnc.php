@@ -25,8 +25,9 @@ class fnc {
 	
 	
 	public function pocitajJSONderivacia($api, $x1, $x2, $exp) {
+		global $apiKey;
 		
-		if ($api == 'abc123') {
+		if ($api == $apiKey) {
 			$str = str_replace("/"," ./",$exp);
 			$str2 = str_replace("^"," .^",$str);
 			

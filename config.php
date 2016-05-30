@@ -16,4 +16,7 @@ if(!$db){
 }
 mysql_set_charset('utf8');
 //news
+//API
+$apiKey = "abc132";
+//API
 ?>
